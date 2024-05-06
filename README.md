@@ -21,10 +21,10 @@ Optional parameters for *CookiesComponent.new(...)* are:
 
 Default is:
 
-   You may delete and block all cookies from this site,
+> You may delete and block all cookies from this site,
 but parts of the site will not work.
 
-   Click *Accept* if you consent usage of cookies, otherwise click *Reject*.
+> Click *Accept* if you consent usage of cookies, otherwise click *Reject*.
 
 ### _text2_
 
