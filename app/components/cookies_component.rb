@@ -50,8 +50,6 @@ class CookiesComponent < ViewComponent::Base
     #cookies
       - accept_text = t("micoo.button.accept", default: "Accept")
       - reject_text = t("micoo.button.reject", default: "Reject")
-      - ic accept_text
-      - ic reject_text
       - @url ||= "/"
       - [@text].flatten.each do |line|
         p = line.html_safe
