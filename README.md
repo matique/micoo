@@ -51,6 +51,21 @@ Default is "/".
   ...
 ```
 
+## I18n
+You may provide an "internationalized" text via the _text_ parameter.
+
+_Micoo_ buttons uses the I18n.translate method for the legend.
+A configuration file (a sample) may be:
+
+```ruby
+# config/locales/en.yml
+en:
+  micoo:
+    button:
+      accept: Accept
+      reject: Reject
+```
+
 ## Installation
 As usual:
 

@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gemspec
 
 gem "rails"
+gem "i18n"
 gem "view_component"
 
 group :test do

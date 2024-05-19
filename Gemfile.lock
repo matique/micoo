@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    micoo (0.1.3)
+    micoo (0.2.0)
       rails (>= 7.1.3)
 
 GEM
@@ -306,6 +306,7 @@ DEPENDENCIES
   capybara
   combustion
   cuco
+  i18n
   micoo!
   minitest
   minitest-spec-rails
