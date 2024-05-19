@@ -48,6 +48,10 @@ class CookiesComponent < ViewComponent::Base
       }
 
     #cookies
+      - accept_text = t("micoo.button.accept", default: "Accept")
+      - reject_text = t("micoo.button.reject", default: "Reject")
+      - ic accept_text
+      - ic reject_text
       - @url ||= "/"
       - [@text].flatten.each do |line|
         p = line.html_safe
@@ -55,8 +59,8 @@ class CookiesComponent < ViewComponent::Base
         p = line.html_safe
       .buttons
         button
-          a href=helpers.cookies_path(cookiesOK: :x, url: @url) Accept
+          a href=helpers.cookies_path(cookiesOK: :x, url: @url) = accept_text
         button
-          a href=helpers.cookies_path(url: @url) Reject
+          a href=helpers.cookies_path(url: @url) = reject_text
   HEREDOC
 end

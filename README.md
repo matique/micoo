@@ -34,7 +34,7 @@ add additional text and links for further description.
 ### _url_
 
 Redirection to _url_ will be triggered by clicking *Accept* or *Reject*.
-Defult is "/".
+Default is "/".
 
 ## Usage
 
