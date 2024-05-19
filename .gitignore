@@ -1,0 +1,12 @@
+**/*.bak
+**/*.tmp
+**/*.out
+
+.byebug_history
+.watchr
+/coverage/
+
+**/log/
+**/tmp/
+**/db/*.sqlite3*
+**/db/*.sqlite3-*
