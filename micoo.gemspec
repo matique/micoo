@@ -26,7 +26,6 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency "combustion"
   s.add_development_dependency "minitest"
-  s.add_dependency "rails", ">= 7.1.3"
+  s.add_dependency "rails"
   s.add_development_dependency "ricecream"
-  # s.add_development_dependency "sqlite3"
 end

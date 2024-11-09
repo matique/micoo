@@ -15,6 +15,6 @@ group :test do
   gem "ricecream"
   gem "simplecov", require: false
   gem "slim"
-  gem "sqlite3", "~> 1.0"
+  gem "sqlite3"
   gem "standard", require: false
 end
