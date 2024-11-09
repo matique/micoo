@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     micoo (0.2.0)
-      rails
+      slim
 
 GEM
   remote: https://rubygems.org/
@@ -329,7 +329,6 @@ DEPENDENCIES
   rails-controller-testing
   ricecream
   simplecov
-  slim
   sqlite3
   standard
   view_component

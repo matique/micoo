@@ -14,7 +14,6 @@ group :test do
   gem "rails-controller-testing"
   gem "ricecream"
   gem "simplecov", require: false
-  gem "slim"
   gem "sqlite3"
   gem "standard", require: false
 end
