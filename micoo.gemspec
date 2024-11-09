@@ -24,8 +24,7 @@ Gem::Specification.new do |s|
 
   s.require_paths = ["lib"]
 
-  s.add_dependency "slim"
-
   s.add_development_dependency "combustion"
   s.add_development_dependency "minitest"
+  s.add_development_dependency "rails"
 end

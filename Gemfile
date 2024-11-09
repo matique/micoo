@@ -2,7 +2,6 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gemspec
 
-gem "rails"
 gem "i18n"
 gem "slim"
 gem "view_component"
