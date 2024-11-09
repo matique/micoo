@@ -4,6 +4,7 @@ gemspec
 
 gem "rails"
 gem "i18n"
+gem "slim"
 gem "view_component"
 
 group :test do

@@ -329,6 +329,7 @@ DEPENDENCIES
   rails-controller-testing
   ricecream
   simplecov
+  slim
   sqlite3
   standard
   view_component
