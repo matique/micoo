@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  get "cookies", to: "cookies#index"
+  get "/cookies/accept"
+  get "/cookies/reject"
 end

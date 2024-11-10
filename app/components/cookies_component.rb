@@ -3,7 +3,7 @@
 require "view_component"
 
 class CookiesComponent < ViewComponent::Base
-  def initialize(text: nil, text2: [], url: nil)
+  def initialize(text: nil, url: nil)
     unless text
       text = []
       text << <<~EOS
@@ -17,7 +17,6 @@ class CookiesComponent < ViewComponent::Base
     end
 
     @text = text
-    @text2 = text2
     @url = url
   end
 
@@ -48,17 +47,17 @@ class CookiesComponent < ViewComponent::Base
       }
 
     #cookies
+      - #ic cookies_accept_path
+      - #ic cookies_reject_path
       - accept_text = t("micoo.button.accept", default: "Accept")
       - reject_text = t("micoo.button.reject", default: "Reject")
       - @url ||= "/"
       - [@text].flatten.each do |line|
         p = line.html_safe
-      - [@text2].flatten.each do |line|
-        p = line.html_safe
       .buttons
         button
-          a href=helpers.cookies_path(cookiesOK: :x, url: @url) = accept_text
+          a href=helpers.cookies_accept_path(url: @url) = accept_text
         button
-          a href=helpers.cookies_path(url: @url) = reject_text
+          a href=helpers.cookies_reject_path(url: @url) = reject_text
   HEREDOC
 end
