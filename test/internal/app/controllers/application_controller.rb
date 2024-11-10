@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 
   def always
     unless cookies[:cookiesOK] == "x"
-      render CookiesComponent.new(url: root_path)
+      render CookiesComponent.new(url: request.url)
     end
   end
 end

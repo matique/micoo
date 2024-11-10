@@ -24,21 +24,26 @@ Optional parameters for *CookiesComponent.new(...)* are:
 Default is:
 
 > You may delete and block all cookies from this site,
-but parts of the site will not work.
-
+> but parts of the site will not work.
+>
 > Click *Accept* if you consent usage of cookies, otherwise click *Reject*.
-
-### _text2_
-
-_text2_ may be used to
-add additional text and links for further description.
 
 ### _url_
 
 Redirection to _url_ will be triggered by clicking *Accept* or *Reject*.
-Default is "/".
+Default is *request.url*.
 
 ## Usage
+
+```ruby
+# config/routes.rb
+Rails.application.routes.draw do
+  ...
+  get "/cookies/accept"
+  get "/cookies/reject"
+  ...
+end
+```
 
 ```ruby
 # app/controllers/application_controller.rb (recommended)
@@ -47,7 +52,7 @@ Default is "/".
 
   def always
     unless cookies[:cookiesOK] == "x"
-      render CookiesComponent.new(url: root_path)
+      render CookiesComponent.new(url: request.url)
     end
   end
   ...

@@ -2,45 +2,48 @@ require "test_helper"
 
 describe ApplicationController do
   include Capybara::DSL
-  let(:sym) { :cookiesOK }
 
-  def test_cookies_reset
-    visit "/cookies"
+  def test_reject
+    visit "/cookies/reject"
+    assert_selector "div#cookies"
     assert page.has_content?("Accept")
-    assert page.has_content?("Reject")
-  end
-
-  def test_cookiesOK
-    visit "/cookies?cookiesOK=x&url=/"
-    assert page.has_content?("Root#home")
-  end
-
-  def test_click_accept
-    visit "/cookies" # reset
-    click_link("Accept")
-    assert page.has_content?("Root#home")
   end
 
   def test_click_reject
-    visit "/cookies" # reset
+    visit "/cookies/reject"
     click_link("Reject")
+    assert_selector "div#cookies"
     assert page.has_content?("Accept")
-    assert page.has_content?("Reject")
+  end
+
+  def test_accept
+    visit "/cookies/accept"
+    assert_selector("div#cookies", count: 0)
+    refute page.has_content?("Accept")
+  end
+
+  def test_click_accept
+    visit "/cookies/reject"
+    click_link("Accept")
+    assert_selector("div#cookies", count: 0)
+    refute page.has_content?("Accept")
   end
 
   def test_expires
-    visit "/cookies?cookiesOK=x&url=/"
+    visit "/cookies/accept"
     assert page.has_content?("Root#home")
 
     travel(1.month - 10.seconds) do
       visit "/"
+      assert_selector("div#cookies", count: 0)
+      refute page.has_content?("Reject")
       assert page.has_content?("Root#home")
     end
 
     travel(1.month + 10.seconds) do
       visit "/"
+      assert_selector "div#cookies"
       assert page.has_content?("Accept")
-      assert page.has_content?("Reject")
     end
   end
 end
