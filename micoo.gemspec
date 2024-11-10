@@ -17,6 +17,9 @@ Gem::Specification.new do |s|
   s.license = "MIT"
 
   # s.files = `git ls-files`.split("\n")
+  # s.files = Dir.chdir(File.expand_path(__dir__)) do
+  #   Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  # end
   s.files = Dir["lib/**/*"]
   s.files += Dir["app/**/*"]
   s.files += Dir["config/**/*"]
