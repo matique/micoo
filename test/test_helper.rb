@@ -5,7 +5,7 @@ if ENV["COVERAGE"]
   end
 end
 
-ENV["RAILS_ENV"] ||= "test"
+ENV["RAILS_ENV"] = "test"
 
 require "combustion"
 Combustion.path = "test/internal"

@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.summary = %(Minimal Cookies Consent Banner.)
 
   s.description = <<~EOS
-    MICOO (Minimal Cookies) is an Rails engine to handle
+    MICOO (Minimal Cookies) is a Rails engine to handle
     Cookies consent.
   EOS
 
@@ -26,7 +26,5 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency "combustion"
   s.add_development_dependency "minitest"
-#  s.add_dependency "rails", ">= 7.1.3"
-  s.add_dependency "rails", "= 7.2.2"
-  s.add_development_dependency "ricecream"
+  s.add_development_dependency "rails"
 end
