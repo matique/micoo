@@ -1,4 +1,4 @@
-class CookiesController < ApplicationController
+class CookiesController < ActionController::Base
   def index
     sym = :cookiesOK
     if params[sym] == "x"
