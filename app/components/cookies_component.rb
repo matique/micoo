@@ -17,7 +17,7 @@ class CookiesComponent < ViewComponent::Base
     end
 
     @text = text
-    @url = url
+    @url = url || "/"
   end
 
   slim_template <<~HEREDOC
@@ -47,11 +47,8 @@ class CookiesComponent < ViewComponent::Base
       }
 
     #cookies
-      - #ic cookies_accept_path
-      - #ic cookies_reject_path
       - accept_text = t("micoo.button.accept", default: "Accept")
       - reject_text = t("micoo.button.reject", default: "Reject")
-      - @url ||= "/"
       - [@text].flatten.each do |line|
         p = line.html_safe
       .buttons

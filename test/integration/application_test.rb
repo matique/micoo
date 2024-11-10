@@ -5,28 +5,28 @@ describe ApplicationController do
 
   def test_reject
     visit "/cookies/reject"
+    assert_selector "div#cookies"
     assert page.has_content?("Accept")
-    assert page.has_content?("Reject")
   end
 
   def test_click_reject
     visit "/cookies/reject"
     click_link("Reject")
+    assert_selector "div#cookies"
     assert page.has_content?("Accept")
-    assert page.has_content?("Reject")
   end
 
   def test_accept
     visit "/cookies/accept"
+    assert_selector("div#cookies", count: 0)
     refute page.has_content?("Accept")
-    refute page.has_content?("Reject")
   end
 
   def test_click_accept
     visit "/cookies/reject"
     click_link("Accept")
+    assert_selector("div#cookies", count: 0)
     refute page.has_content?("Accept")
-    refute page.has_content?("Reject")
   end
 
   def test_expires
@@ -35,13 +35,15 @@ describe ApplicationController do
 
     travel(1.month - 10.seconds) do
       visit "/"
+      assert_selector("div#cookies", count: 0)
+      refute page.has_content?("Reject")
       assert page.has_content?("Root#home")
     end
 
     travel(1.month + 10.seconds) do
       visit "/"
+      assert_selector "div#cookies"
       assert page.has_content?("Accept")
-      assert page.has_content?("Reject")
     end
   end
 end
