@@ -8,7 +8,7 @@ end
 ENV["RAILS_ENV"] = "test"
 
 require "combustion"
-Combustion.path = "test/internal"
+Combustion.path = "test/dummy"
 Combustion.initialize! :action_controller
 
 require "capybara/rails"
