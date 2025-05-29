@@ -1,10 +1,6 @@
-**/*.bak
-**/*.tmp
-**/*.out
+# ~/.gitignore included
 
-.byebug_history
 .watchr
-/coverage/
 
 **/log/
 **/tmp/
