@@ -14,3 +14,4 @@ Combustion.initialize! :action_controller
 require "capybara/rails"
 require "minitest/autorun"
 require "rails/test_help"
+require "ricecream"

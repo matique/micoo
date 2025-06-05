@@ -1,4 +1,4 @@
-# Micoo
+[1;5C# Micoo
 
 [![Gem Version](https://badge.fury.io/rb/micoo.svg)](http://badge.fury.io/rb/micoo)
 [![GEM Downloads](https://img.shields.io/gem/dt/micoo?color=168AFE&logo=ruby&logoColor=FE1616)](https://rubygems.org/gems/micoo)
@@ -10,10 +10,11 @@ Micoo (minimal Cookie) is a Rails Engine handling the Cookie consent.
 Besides installing the gem just a minimal code is required (see _Usage_).
 
 Micoo display a styled text including buttons for
-accepting or rejecting usage of cookies.
+accepting, rejecting and customize usage of cookies.
 
 Clicking *Accept* set the cookie "cookiesOK" to "x",
-clicking *Reject* will delete the cookie.
+clicking *Reject* will delete the cookie,
+clicking *Customize* links to administration of cookies.
 
 ## Optional Parameters
 
@@ -71,6 +72,7 @@ en:
     button:
       accept: Accept
       reject: Reject
+      customize: Customize
 ```
 
 ## Installation
@@ -84,5 +86,5 @@ gem "micoo"
 and run "bundle install".
 
 ## License
-Copyright (c) 2024 Dittmar Krall (www.matiq.com),
+Copyright (c) 2024-2025 Dittmar Krall (www.matiq.com),
 released under the [MIT license](https://opensource.org/licenses/MIT).
