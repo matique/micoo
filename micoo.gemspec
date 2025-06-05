@@ -16,16 +16,13 @@ Gem::Specification.new do |s|
   s.homepage = "https://github.com/matique/micoo"
   s.license = "MIT"
 
-  # s.files = `git ls-files`.split("\n")
-  # s.files = Dir.chdir(File.expand_path(__dir__)) do
-  #   Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
-  # end
   s.files = Dir["lib/**/*"]
   s.files += Dir["app/**/*"]
   s.files += Dir["config/**/*"]
   s.extra_rdoc_files = Dir["README.md", "MIT-LICENSE"]
 
   s.require_paths = ["lib"]
+  s.required_ruby_version = "~> 3"
 
   s.add_development_dependency "combustion"
   s.add_development_dependency "minitest"

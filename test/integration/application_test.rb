@@ -5,6 +5,7 @@ describe ApplicationController do
 
   def test_reject
     visit "/cookies/reject"
+    # ic page.body
     assert_selector "div#cookies"
     assert page.has_content?("Accept")
   end

@@ -12,7 +12,7 @@ group :test do
   gem "cuco"
   gem "minitest-spec-rails"
   gem "rails-controller-testing"
-  gem "ricecream"
+  gem "ricecream", require: false
   gem "simplecov", require: false
   gem "sqlite3"
   gem "standard", require: false

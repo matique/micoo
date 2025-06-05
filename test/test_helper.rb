@@ -8,9 +8,10 @@ end
 ENV["RAILS_ENV"] = "test"
 
 require "combustion"
-Combustion.path = "test/internal"
-Combustion.initialize! :active_record
+Combustion.path = "test/dummy"
+Combustion.initialize! :action_controller
 
 require "capybara/rails"
 require "minitest/autorun"
 require "rails/test_help"
+require "ricecream"
