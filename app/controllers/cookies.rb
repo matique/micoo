@@ -8,4 +8,8 @@ class CookiesController < ActionController::Base
     cookies.delete(:cookiesOK)
     redirect_to("/")
   end
+
+  def customize
+    raise "Define your own CookiesController#customize"
+  end
 end
