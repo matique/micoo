@@ -22,19 +22,18 @@ describe CookiesController do
   end
 end
 
-
 # Test with redefined "customize" method.
 # Outcommented as it interfered with previous test.
 #
-#class CookiesController < ActionController::Base
-#  def customize
-#    redirect_to("/")
-#  end
-#end
+# class CookiesController < ActionController::Base
+#   def customize
+#     redirect_to("/")
+#   end
+# end
 #
-#describe CookiesController do
-#  def test_customize
-#    get :customize
-#    assert true
-#  end
-#end
+# describe CookiesController do
+#   def test_customize
+#     get :customize
+#     assert true
+#   end
+# end
