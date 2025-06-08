@@ -3,7 +3,7 @@
 require "view_component"
 
 class CookiesComponent < ViewComponent::Base
-  def initialize(text: nil, url: nil, customize_url: nil)
+  def initialize(text: nil)
     unless text
       text = []
       text << <<~EOS
@@ -17,8 +17,6 @@ class CookiesComponent < ViewComponent::Base
     end
 
     @text = text
-    @url = url || "/"
-    @customize_url = customize_url
   end
 
   slim_template <<~HEREDOC
@@ -55,11 +53,10 @@ class CookiesComponent < ViewComponent::Base
         p = line.html_safe
       .buttons
         button
-          a href=helpers.cookies_accept_path(url: @url) = accept_text
+          a href=helpers.cookies_accept_path = accept_text
         button
-          a href=helpers.cookies_reject_path(url: @url) = reject_text
-        - unless @customize_url.nil?
-          button
-            a href=@customize_url = customize_text
+          a href=helpers.cookies_reject_path = reject_text
+        button#customize
+          a href=helpers.cookies_customize_path = customize_text
   HEREDOC
 end
