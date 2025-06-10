@@ -2,8 +2,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/micoo.svg)](http://badge.fury.io/rb/micoo)
 [![GEM Downloads](https://img.shields.io/gem/dt/micoo?color=168AFE&logo=ruby&logoColor=FE1616)](https://rubygems.org/gems/micoo)
-[![rake](https://github.com/matique/micoo/actions/workflows/rake.yml/badge.svg)](https://github.com/matique/micoo/actions/workflows/rake.yml)
-[![rake](https://img.shields.io/github/actions/workflow/status/matique/micoo/rake.yml?logo=github)](https://github.com/matique/micoo/actions/workflows/rake.yml)
+[![](https://img.shields.io/github/actions/workflow/status/matique/micoo/rake.yml?logo=github)](https://github.com/matique/micoo/actions/workflows/rake.yml)
 [![Ruby Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://github.com/standardrb/standard)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](http://choosealicense.com/licenses/mit/)
 
