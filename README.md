@@ -1,10 +1,10 @@
 # Micoo
 
 [![Gem Version](https://img.shields.io/gem/v/micoo?color=168AFE&logo=rubygems&logoColor=FE1616)](https://rubygems.org/gems/micoo)
-[![](https://img.shields.io/gem/dt/micoo?color=168AFE&logo=rubygems&logoColor=FE1616)](https://rubygems.org/gems/micoo)
-[![](https://img.shields.io/github/actions/workflow/status/matique/micoo/rake.yml?logo=github)](https://github.com/matique/micoo/actions/workflows/rake.yml)
-[![Ruby Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://github.com/standardrb/standard)
-[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](http://choosealicense.com/licenses/mit/)
+[![Downloads](https://img.shields.io/gem/dt/micoo?color=168AFE&logo=rubygems&logoColor=FE1616)](https://rubygems.org/gems/micoo)
+[![GitHub Build](https://img.shields.io/github/actions/workflow/status/matique/micoo/rake.yml?logo=github)](https://github.com/matique/micoo/actions/workflows/rake.yml)
+[![Ruby Style Guide](https://img.shields.io/badge/code_style-standard-168AFE.svg)](https://github.com/standardrb/standard)
+[![MIT License](https://img.shields.io/badge/license-MIT-168AFE.svg)](http://choosealicense.com/licenses/mit/)
 
 _Micoo_ (minimal Cookie) is a Rails Engine handling the Cookie consent.
 Besides installing the gem just a minimal code is required (see _Usage_).
