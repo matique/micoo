@@ -7,4 +7,5 @@ Rake::TestTask.new do |t|
   t.verbose = false
 end
 
+desc "Default: run unit tests."
 task default: :test

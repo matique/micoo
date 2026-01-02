@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+# git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gemspec
 
 gem "i18n"
@@ -10,6 +10,7 @@ group :test do
   gem "capybara"
   gem "cuco"
   gem "minitest-spec-rails"
+  gem "rake"
   gem "ricecream", require: false
   gem "simplecov", require: false
   gem "standard", require: false

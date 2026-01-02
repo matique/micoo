@@ -328,6 +328,7 @@ DEPENDENCIES
   minitest
   minitest-spec-rails
   rails
+  rake
   ricecream
   simplecov
   slim
