@@ -5,7 +5,7 @@ gemspec
 gem "i18n"
 gem "slim"
 gem "view_component"
-gem "mini_portile2"
+#gem "mini_portile2"
 
 group :test do
   gem "capybara"
